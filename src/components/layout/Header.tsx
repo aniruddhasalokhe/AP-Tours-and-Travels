@@ -26,12 +26,7 @@ export const Header: React.FC = () => {
 
     if (href.startsWith('#')) {
       const targetId = href.replace(/^#/, '');
-      let targetElement = document.getElementById(targetId);
-
-      // If routes section is hidden on mobile, scroll gracefully to services
-      if (targetId === 'routes' && (!targetElement || targetElement.offsetParent === null)) {
-        targetElement = document.getElementById('services') || document.getElementById('vehicle');
-      }
+      const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth' });

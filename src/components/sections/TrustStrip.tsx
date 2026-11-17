@@ -92,18 +92,16 @@ const TrustStrip: React.FC = () => {
       id="trust-strip"
       ref={stripRef}
       aria-label="Trust and reliability highlights"
-      className="fade-in-section bg-[#F5B400] text-[#0B1530] py-4 md:py-6 shadow-sm relative z-10"
+      className="fade-in-section bg-[#F5B400] text-[#0B1530] py-3.5 md:py-5 shadow-sm relative z-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-0 lg:flex-nowrap">
+        <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-3 sm:gap-6">
           {siteConfig.trustItems.map((item, index) => (
             <div
               key={index}
-              className={`flex items-center gap-2 sm:gap-2.5 px-2 md:px-5 lg:px-6 justify-center ${
-                index === siteConfig.trustItems.length - 1 ? 'col-span-2 md:col-span-1' : ''
-              } ${
+              className={`flex items-center gap-2 sm:gap-2.5 px-2 md:px-4 justify-center ${
                 index < siteConfig.trustItems.length - 1
-                  ? 'lg:border-r lg:border-[#0B1530]/20'
+                  ? 'md:border-r md:border-[#0B1530]/20'
                   : ''
               }`}
             >

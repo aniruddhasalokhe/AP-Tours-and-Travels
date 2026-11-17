@@ -23,7 +23,7 @@ const OurVehicle: React.FC = () => {
     <section
       id="vehicle"
       ref={sectionRef}
-      className="fade-in-section py-10 md:py-24 bg-[#F8F9FA]"
+      className="fade-in-section py-10 md:py-16 bg-[#F8F9FA]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}

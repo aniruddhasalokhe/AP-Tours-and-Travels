@@ -1,8 +1,7 @@
 // ============================================================
 // AP Tours & Travels — Main Application
 // ============================================================
-// Assembles all sections in order. Each section is independently
-// editable. Content is driven from src/config/site.ts.
+// Assembles all sections in order. Content is driven from src/config/site.ts.
 // ============================================================
 
 import Header from './components/layout/Header';
@@ -14,13 +13,10 @@ import Hero from './components/sections/Hero';
 import TrustStrip from './components/sections/TrustStrip';
 import Services from './components/sections/Services';
 import OurVehicle from './components/sections/OurVehicle';
-import PopularRoutes from './components/sections/PopularRoutes';
-import HowItWorks from './components/sections/HowItWorks';
 import WhyChooseUs from './components/sections/WhyChooseUs';
-import Gallery from './components/sections/Gallery';
-import FAQ from './components/sections/FAQ';
 import PartnerWithUs from './components/sections/PartnerWithUs';
 import Contact from './components/sections/Contact';
+import FAQ from './components/sections/FAQ';
 
 function App() {
   return (
@@ -42,26 +38,17 @@ function App() {
         {/* 4. Our Vehicle */}
         <OurVehicle />
 
-        {/* 5. Popular Routes */}
-        <PopularRoutes />
-
-        {/* 6. How It Works */}
-        <HowItWorks />
-
-        {/* 7. Why Choose Us */}
+        {/* 5. Why Choose Us */}
         <WhyChooseUs />
 
-        {/* 8. Gallery */}
-        <Gallery />
-
-        {/* 9. FAQ */}
-        <FAQ />
-
-        {/* 10. Partner With Us */}
+        {/* 6. Partner With Us */}
         <PartnerWithUs />
 
-        {/* 11. Contact */}
+        {/* 7. Contact */}
         <Contact />
+
+        {/* 8. Frequently Asked Questions (At the last) */}
+        <FAQ />
       </main>
 
       {/* --- Footer --- */}

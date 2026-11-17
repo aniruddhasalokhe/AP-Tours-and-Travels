@@ -38,20 +38,18 @@ export const siteConfig = {
     { label: 'Home', href: '#home' },
     { label: 'Services', href: '#services' },
     { label: 'Our Vehicle', href: '#vehicle' },
-    { label: 'Routes', href: '#routes' },
     { label: 'Why Us', href: '#why-us' },
-    { label: 'FAQ', href: '#faq' },
     { label: 'Partner With Us', href: '#partner' },
     { label: 'Contact', href: '#contact' },
+    { label: 'FAQ', href: '#faq' },
   ],
 
   // --- Trust Strip ---
   trustItems: [
     { icon: 'driver', text: 'Professional Driver' },
     { icon: 'car', text: 'Clean & Comfortable 7-Seater Crysta' },
-    { icon: 'clock', text: 'Punctual Pickups' },
+    { icon: 'clock', text: 'Timely Pickups' },
     { icon: 'price', text: 'Transparent Pricing' },
-    { icon: 'map', text: 'Kolhapur–Pune–All India' },
   ],
 
   // --- Services ---

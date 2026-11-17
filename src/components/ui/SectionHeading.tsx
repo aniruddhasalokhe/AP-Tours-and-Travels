@@ -15,9 +15,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   className = '',
 }) => {
   return (
-    <div className={`text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-14 ${className}`}>
+    <div className={`text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 ${className}`}>
       <h2
-        className={`font-['Poppins'] font-bold text-xl sm:text-3xl md:text-4xl tracking-tight ${
+        className={`font-['Poppins'] font-bold text-xl sm:text-2xl md:text-3xl tracking-tight ${
           light ? 'text-white' : 'text-[#0B1530]'
         }`}
       >

@@ -234,7 +234,7 @@ const PartnerForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="e.g. 9822153400"
+              placeholder="e.g. 9614379062"
               className={inputClass}
               required
             />

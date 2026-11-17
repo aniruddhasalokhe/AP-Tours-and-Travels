@@ -38,7 +38,7 @@ const PartnerWithUs: React.FC = () => {
     <section
       id="partner"
       ref={sectionRef}
-      className="fade-in-section py-10 md:py-24 bg-[#0B1530] text-white relative overflow-hidden"
+      className="fade-in-section py-10 md:py-16 bg-[#0B1530] text-white relative overflow-hidden"
     >
       {/* Decorative ambient background blur */}
       <div

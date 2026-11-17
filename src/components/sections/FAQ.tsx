@@ -25,7 +25,7 @@ const FAQ: React.FC = () => {
     <section
       id="faq"
       ref={sectionRef}
-      className="fade-in-section py-10 md:py-24 bg-white"
+      className="fade-in-section py-10 md:py-16 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
