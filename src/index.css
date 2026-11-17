@@ -1,0 +1,106 @@
+/* ============================================================
+   AP Tours & Travels — Global Styles
+   Tailwind CSS v4 entry point
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* --- Custom Theme (Tailwind v4 CSS-first config) --- */
+@theme {
+  --color-navy: #0B1530;
+  --color-navy-light: #132044;
+  --color-amber: #F5B400;
+  --color-amber-dark: #D49E00;
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* --- Base Styles --- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for sticky header */
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Fade-In Animation (used by useFadeIn hook) --- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- WhatsApp Pulse Animation --- */
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.wa-pulse {
+  animation: wa-pulse 2s infinite;
+}
+
+/* --- Toast Animation --- */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-enter {
+  animation: toast-in 0.3s ease-out;
+}
+
+/* --- Custom Scrollbar (optional) --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F3F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0B1530;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #132044;
+}
+
+/* --- Mobile Bottom Bar Spacer --- */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 3.5rem; /* space for MobileBottomBar */
+  }
+}
+
+/* --- Selection Color --- */
+::selection {
+  background: #F5B400;
+  color: #0B1530;
+}
