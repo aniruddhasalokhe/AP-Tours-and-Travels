@@ -113,7 +113,7 @@ const Services: React.FC = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="fade-in-section py-16 md:py-24 bg-white"
+      className="fade-in-section py-10 md:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -123,7 +123,7 @@ const Services: React.FC = () => {
         />
 
         {/* 5 Cards Grid: 1 col on mobile, 2 col on tablet, 3 col on desktop (last 2 centered) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {siteConfig.services.map((service, index) => {
             const whatsappMessage = `Hi AP Tours & Travels, I would like to enquire about your ${service.title} service. Please share availability and rates.`;
             const whatsappUrl = buildWhatsAppLink(siteConfig.whatsappNumber, whatsappMessage);
@@ -146,15 +146,15 @@ const Services: React.FC = () => {
                 key={service.id || index}
                 className={`${colPlacement} flex flex-col`}
               >
-                <Card className="h-full flex flex-col items-start justify-between border border-gray-100 hover:border-[#F5B400]/40 transition-all duration-300">
+                <Card className="h-full flex flex-col items-start justify-between p-4 sm:p-6 border border-gray-100 hover:border-[#F5B400]/40 transition-all duration-300">
                   <div className="w-full">
-                    <div className="p-3 bg-[#F5B400]/10 rounded-2xl inline-block mb-5">
+                    <div className="p-2 sm:p-3 bg-[#F5B400]/10 rounded-xl sm:rounded-2xl inline-block mb-3 sm:mb-5">
                       <ServiceIcon icon={service.icon} />
                     </div>
-                    <h3 className="font-['Poppins'] font-semibold text-xl text-[#0B1530] mb-3">
+                    <h3 className="font-['Poppins'] font-semibold text-lg sm:text-xl text-[#0B1530] mb-2 sm:mb-3">
                       {service.title}
                     </h3>
-                    <p className="font-['Inter'] text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                    <p className="font-['Inter'] text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-6">
                       {service.description}
                     </p>
                   </div>
@@ -163,7 +163,7 @@ const Services: React.FC = () => {
                     href={whatsappUrl}
                     variant="outline"
                     size="sm"
-                    className="mt-auto group"
+                    className="mt-auto group text-xs sm:text-sm py-1.5 sm:py-2 px-3 sm:px-4"
                     aria-label={`Enquire about ${service.title} on WhatsApp`}
                   >
                     <span>Enquire</span>

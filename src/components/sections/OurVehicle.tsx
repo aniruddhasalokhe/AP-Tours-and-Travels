@@ -23,7 +23,7 @@ const OurVehicle: React.FC = () => {
     <section
       id="vehicle"
       ref={sectionRef}
-      className="fade-in-section py-16 md:py-24 bg-[#F8F9FA]"
+      className="fade-in-section py-10 md:py-24 bg-[#F8F9FA]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -33,38 +33,38 @@ const OurVehicle: React.FC = () => {
         />
 
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
-          {/* Left Column: Real Vehicle Photos */}
-          <div className="space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-14 items-center max-w-6xl mx-auto">
+          {/* Left Column: Real Vehicle Photos (Side by side on mobile for compact view) */}
+          <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4 lg:gap-6">
             {/* Top Photo with Floating 7-Seater Badge */}
             <div>
-              <div className="relative overflow-hidden rounded-2xl shadow-lg bg-gray-200">
+              <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg bg-gray-200">
                 <img
                   src={siteConfig.images.crystaFront}
                   alt="Toyota Innova Crysta front angle view - AP Tours & Travels Kolhapur"
                   loading="lazy"
-                  className="w-full h-56 sm:h-64 md:h-72 object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-36 sm:h-52 md:h-72 object-cover transition-transform duration-300 hover:scale-105"
                 />
-                <span className="absolute top-4 right-4 bg-[#F5B400] text-[#0B1530] px-4 py-1.5 rounded-full font-bold text-sm shadow-md">
+                <span className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-[#F5B400] text-[#0B1530] px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full font-bold text-xs sm:text-sm shadow-md">
                   7 Seater
                 </span>
               </div>
-              <p className="mt-2 text-center sm:text-left italic text-sm text-gray-500 font-['Inter']">
+              <p className="mt-1.5 text-center sm:text-left italic text-xs sm:text-sm text-gray-500 font-['Inter']">
                 Our actual vehicle
               </p>
             </div>
 
             {/* Bottom Photo */}
             <div>
-              <div className="overflow-hidden rounded-2xl shadow-lg bg-gray-200">
+              <div className="overflow-hidden rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg bg-gray-200">
                 <img
                   src={siteConfig.images.crystaSide}
                   alt="Toyota Innova Crysta side profile view - AP Tours & Travels Kolhapur"
                   loading="lazy"
-                  className="w-full h-56 sm:h-64 md:h-72 object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-36 sm:h-52 md:h-72 object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <p className="mt-2 text-center sm:text-left italic text-sm text-gray-500 font-['Inter']">
+              <p className="mt-1.5 text-center sm:text-left italic text-xs sm:text-sm text-gray-500 font-['Inter']">
                 Our actual vehicle
               </p>
             </div>

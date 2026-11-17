@@ -45,7 +45,7 @@ const Gallery: React.FC = () => {
     <section
       id="gallery"
       ref={sectionRef}
-      className="fade-in-section py-16 md:py-24 bg-white"
+      className="fade-in-section py-10 md:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -55,7 +55,7 @@ const Gallery: React.FC = () => {
         />
 
         {/* Responsive Grid: 2 columns on mobile, 3 columns on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
           {galleryItems.map((item, index) => (
             <div
               key={index}

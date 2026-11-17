@@ -36,7 +36,7 @@ const HowItWorks: React.FC = () => {
     <section
       id="how-it-works"
       ref={howRef}
-      className="py-16 md:py-24 bg-white fade-in-section"
+      className="py-10 md:py-24 bg-white fade-in-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -44,34 +44,34 @@ const HowItWorks: React.FC = () => {
           subtitle="Booking your comfortable Innova Crysta ride is quick and straightforward — no complicated apps or login needed."
         />
 
-        <div className="relative mt-8 md:mt-12">
+        <div className="relative mt-6 md:mt-12">
           {/* Connecting line on desktop */}
           <div
             className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -translate-y-6 z-0"
             aria-hidden="true"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 relative z-10">
             {siteConfig.steps.map((item) => (
               <div
                 key={item.step}
-                className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-md text-center flex flex-col items-center hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm sm:shadow-md text-center flex flex-col items-center hover:shadow-lg transition-all duration-300"
               >
                 {/* Step number badge & icon container */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center border-2 border-[#F5B400] shadow-sm">
+                <div className="relative mb-3 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-amber-100 flex items-center justify-center border-2 border-[#F5B400] shadow-sm">
                     {stepIcons[item.step]}
                   </div>
-                  <span className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-[#0B1530] text-[#F5B400] font-['Poppins'] font-bold text-xs flex items-center justify-center shadow">
+                  <span className="absolute -top-1.5 -right-1.5 sm:-top-2 sm:-right-2 w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#0B1530] text-[#F5B400] font-['Poppins'] font-bold text-xs flex items-center justify-center shadow">
                     {item.step}
                   </span>
                 </div>
 
-                <h3 className="font-['Poppins'] font-bold text-lg sm:text-xl text-[#0B1530] mb-2">
+                <h3 className="font-['Poppins'] font-bold text-base sm:text-xl text-[#0B1530] mb-1 sm:mb-2">
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-base leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -80,7 +80,7 @@ const HowItWorks: React.FC = () => {
         </div>
 
         {/* CTA banner below steps */}
-        <div className="mt-12 text-center bg-[#0B1530] text-white rounded-2xl p-8 sm:p-10 shadow-lg">
+        <div className="mt-8 md:mt-12 text-center bg-[#0B1530] text-white rounded-xl sm:rounded-2xl p-5 sm:p-10 shadow-lg">
           <h4 className="font-['Poppins'] font-bold text-xl sm:text-2xl text-white mb-3">
             Ready to Plan Your Journey?
           </h4>

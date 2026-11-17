@@ -87,7 +87,7 @@ const WhyChooseUs: React.FC = () => {
     <section
       id="why-us"
       ref={sectionRef}
-      className="fade-in-section py-16 md:py-24 bg-[#F8F9FA]"
+      className="fade-in-section py-10 md:py-24 bg-[#F8F9FA]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -97,20 +97,20 @@ const WhyChooseUs: React.FC = () => {
         />
 
         {/* 2x2 Grid of Feature Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
           {siteConfig.whyChooseUs.map((item, index) => (
             <Card
               key={index}
-              className="border-l-4 border-[#F5B400] flex items-start gap-5 p-6 md:p-8"
+              className="border-l-4 border-[#F5B400] flex items-start gap-3 sm:gap-5 p-4 sm:p-6 md:p-8"
             >
-              <div className="p-3 bg-[#F5B400]/10 rounded-xl">
+              <div className="p-2 sm:p-3 bg-[#F5B400]/10 rounded-xl shrink-0">
                 <WhyChooseUsIcon icon={item.icon} />
               </div>
               <div className="flex-1">
-                <h3 className="font-['Poppins'] font-semibold text-lg md:text-xl text-[#0B1530] mb-2">
+                <h3 className="font-['Poppins'] font-semibold text-base sm:text-lg md:text-xl text-[#0B1530] mb-1 sm:mb-2">
                   {item.title}
                 </h3>
-                <p className="font-['Inter'] text-gray-600 text-sm md:text-base leading-relaxed">
+                <p className="font-['Inter'] text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
                   {item.description}
                 </p>
               </div>

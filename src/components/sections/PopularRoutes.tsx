@@ -20,7 +20,7 @@ const PopularRoutes: React.FC = () => {
     <section
       id="routes"
       ref={routesRef}
-      className="py-16 md:py-24 bg-gray-50 fade-in-section"
+      className="hidden md:block py-16 md:py-24 bg-gray-50 fade-in-section"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading

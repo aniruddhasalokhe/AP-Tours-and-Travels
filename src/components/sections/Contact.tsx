@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="fade-in-section py-16 md:py-24 bg-[#F8F9FA]"
+      className="fade-in-section py-10 md:py-24 bg-[#F8F9FA]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -130,8 +130,8 @@ const Contact: React.FC = () => {
           subtitle="Reach out via phone, WhatsApp, email, or Google. We are always ready to assist with your travel arrangements."
         />
 
-        {/* 4 Contact Blocks: 2x2 on mobile/tablet, 4 columns on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {/* 4 Contact Blocks: 2x2 on mobile, 4 columns on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-6xl mx-auto">
           {contactMethods.map((item) => (
             <a
               key={item.id}
@@ -141,29 +141,29 @@ const Contact: React.FC = () => {
               className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B400] rounded-2xl"
               aria-label={`${item.title}: ${item.display}`}
             >
-              <Card className="h-full flex flex-col items-center text-center p-6 sm:p-8 border border-transparent hover:border-[#F5B400]/40 transition-all duration-300">
+              <Card className="h-full flex flex-col items-center text-center p-3.5 sm:p-8 border border-transparent hover:border-[#F5B400]/40 transition-all duration-300">
                 {/* Amber Icon in a subtle container */}
-                <div className="w-16 h-16 rounded-2xl bg-[#F5B400]/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#F5B400]/20 transition-all duration-300">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-[#F5B400]/10 flex items-center justify-center mb-2.5 sm:mb-4 group-hover:scale-110 group-hover:bg-[#F5B400]/20 transition-all duration-300">
                   {item.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="font-['Poppins'] font-bold text-lg text-[#0B1530] mb-1">
+                <h3 className="font-['Poppins'] font-bold text-sm sm:text-lg text-[#0B1530] mb-0.5 sm:mb-1">
                   {item.title}
                 </h3>
 
                 {/* Display Value */}
-                <p className="font-['Inter'] font-semibold text-sm sm:text-base text-[#0B1530] group-hover:text-[#D49E00] transition-colors break-words max-w-full">
+                <p className="font-['Inter'] font-semibold text-xs sm:text-base text-[#0B1530] group-hover:text-[#D49E00] transition-colors break-words max-w-full line-clamp-1 sm:line-clamp-none">
                   {item.display}
                 </p>
 
                 {/* Description */}
-                <p className="font-['Inter'] text-xs sm:text-sm text-gray-500 mt-2">
+                <p className="font-['Inter'] text-[11px] sm:text-sm text-gray-500 mt-1 sm:mt-2 hidden sm:block">
                   {item.description}
                 </p>
 
                 {/* Subtle Action Arrow */}
-                <span className="mt-4 text-xs font-semibold text-[#F5B400] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span className="mt-2 sm:mt-4 text-[11px] sm:text-xs font-semibold text-[#F5B400] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   Connect &rarr;
                 </span>
               </Card>

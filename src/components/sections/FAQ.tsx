@@ -25,7 +25,7 @@ const FAQ: React.FC = () => {
     <section
       id="faq"
       ref={sectionRef}
-      className="fade-in-section py-16 md:py-24 bg-white"
+      className="fade-in-section py-10 md:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -35,7 +35,7 @@ const FAQ: React.FC = () => {
         />
 
         {/* Accordion Container */}
-        <div className="max-w-3xl mx-auto bg-gray-50/50 rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm">
+        <div className="max-w-3xl mx-auto bg-gray-50/50 rounded-xl sm:rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm">
           {siteConfig.faqs.map((faq, index) => (
             <AccordionItem
               key={index}

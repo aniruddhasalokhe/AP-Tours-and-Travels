@@ -95,18 +95,20 @@ const TrustStrip: React.FC = () => {
       className="fade-in-section bg-[#F5B400] text-[#0B1530] py-4 md:py-6 shadow-sm relative z-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-0 lg:flex-nowrap">
+        <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-0 lg:flex-nowrap">
           {siteConfig.trustItems.map((item, index) => (
             <div
               key={index}
-              className={`flex items-center gap-2.5 px-3 md:px-5 lg:px-6 justify-center ${
+              className={`flex items-center gap-2 sm:gap-2.5 px-2 md:px-5 lg:px-6 justify-center ${
+                index === siteConfig.trustItems.length - 1 ? 'col-span-2 md:col-span-1' : ''
+              } ${
                 index < siteConfig.trustItems.length - 1
                   ? 'lg:border-r lg:border-[#0B1530]/20'
                   : ''
               }`}
             >
               <TrustIcon icon={item.icon} />
-              <span className="font-semibold text-sm md:text-base font-['Inter'] whitespace-normal md:whitespace-nowrap text-center sm:text-left">
+              <span className="font-semibold text-xs sm:text-sm md:text-base font-['Inter'] whitespace-normal md:whitespace-nowrap text-left">
                 {item.text}
               </span>
             </div>
